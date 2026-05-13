@@ -2,6 +2,8 @@
 
 You can call it whatever you want. The agent that bootstraps it from this file will ask you on day one.
 
+> This is the long-form description of Arcee. See the [README](README.md) for the repository's context and any shorter or domain-specific variants that live alongside it.
+
 ---
 
 ## What This Is
