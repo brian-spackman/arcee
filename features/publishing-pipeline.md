@@ -23,7 +23,7 @@ The pipeline:
 
 The core design choice: run each QA pass with two models from genuinely different training lineages, not two calls to the same model or family. When two independently-trained models converge on the same finding without seeing each other's output, that convergence is itself strong evidence the finding is real — it's much less likely to be a shared training artifact than a single model's guess would be. When they disagree, that's the signal to go verify against the actual source rather than trust either one blindly.
 
-Two other things worth keeping if you adopt this: state an explicit "80/20, not perfection" bar to every reviewer and to yourself during adjudication, and require every reviewer to say an explicit "stop-publishing" flag is either present or absent — never leave "nothing came back" ambiguous between "everything's fine" and "the reviewer just didn't flag anything."
+Two other things worth keeping if you adopt this: state an explicit "80/20, not perfection" bar to every reviewer and to yourself during adjudication, and require every reviewer to state explicitly whether a "stop-publishing" flag is present or absent — never leave "nothing came back" ambiguous between "everything's fine" and "the reviewer just didn't flag anything."
 
 ## A Legitimate Fallback
 

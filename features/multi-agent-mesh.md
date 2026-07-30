@@ -78,7 +78,7 @@ Don't conflate the three. The mistake people make on day one is putting cross-ag
 
 Three shapes show up in practice. Pick based on how many agents you have and how the content actually overlaps:
 
-**Hub-and-spoke.** One central agent (typically the personal-life or general-thinking-partner) plus specialist agents (thesis coach, training coach, work agent). The hub talks to each specialist; specialists generally don't talk to each other. Bridges run hub ↔ spoke. Shared surfaces, if any, are hub ⊕ spoke. This is the right shape for most non-trivial setups — it scales linearly in pairs as you add specialists, and it matches how humans actually delegate (you're the hub; the specialists report to you).
+**Hub-and-spoke.** One central agent (typically the personal-life or general-thinking-partner) plus specialist agents (thesis coach, training coach, work agent). The hub talks to each specialist; specialists generally don't talk to each other. Bridges run hub ↔ spoke. Shared surfaces, if any, are hub ⊕ spoke (shorthand for "a surface the hub and that spoke jointly reach"). This is the right shape for most non-trivial setups — it scales linearly in pairs as you add specialists, and it matches how humans actually delegate (you're the hub; the specialists report to you).
 
 **Full mesh.** Every pair has a bridge. Possible shared surfaces between any subset. Becomes unwieldy past ~4 agents — n agents means n(n-1) directional bridges, which is more discipline than most humans want to maintain. Use only when peers really do need to coordinate directly.
 

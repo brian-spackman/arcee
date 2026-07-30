@@ -77,9 +77,9 @@ The journaling loop is optional, but it's where the deepest coaching happens.
 
 A short worked example. You write:
 
-> *Long day. Got the deck signed off finally. Priya texted again about how I keep flaking on game night — fair, the dissertation has owned every Tuesday since January. Need to think of something for her housewarming next month.*
+> *Long day. Got the deck signed off finally. Sam texted again about how I keep flaking on game night — fair, the dissertation has owned every Tuesday since January. Need to think of something for her housewarming next month.*
 
-The agent extracts: a task ("plan something for Priya's housewarming next month"); a signal updating the friendship in `people.md`; a theme for `themes.md` if the dissertation-eats-friendships pattern has shown up before. Next conversation, the agent surfaces: *"You named the dissertation-eating-friendships pattern again today. Want to actually carve out a Tuesday this month?"*
+The agent extracts: a task ("plan something for Sam's housewarming next month"); a signal updating the friendship in `people.md`; a theme for `themes.md` if the dissertation-eats-friendships pattern has shown up before. Next conversation, the agent surfaces: *"You named the dissertation-eating-friendships pattern again today. Want to actually carve out a Tuesday this month?"*
 
 You didn't have to do any organizing. You just wrote.
 

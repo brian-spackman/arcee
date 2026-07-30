@@ -25,7 +25,7 @@ Once the core is running, `features/` holds a catalog of things one real deploym
 | [Decision quality](features/decision-quality.md) | Structured evaluation for consequential decisions |
 | [Batched task triage](features/task-batching.md) | Grouping your own required actions by context |
 
-More get added as they prove durable in real use — this is a starting catalog, not a ceiling.
+More are added as they prove durable in real use — this is a starting catalog, not a ceiling.
 
 ## License
 
