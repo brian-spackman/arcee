@@ -1,8 +1,10 @@
-# Multi-Agent Supplement
+# Feature: Multi-Agent Mesh
 
-A supplement to [`idea-file_arcee.md`](./idea-file_arcee.md) — or to any compatible single-agent personal-LLM coaching idea file. This document describes what changes when you grow a single-agent system into a mesh of n agents at different organizational scopes, exchanging context safely.
+A supplement to [`idea-file_arcee.md`](../idea-file_arcee.md) — or to any compatible single-agent personal-LLM idea file. This document describes what changes when you grow a single-agent system into a mesh of n agents at different organizational scopes, exchanging context safely.
 
-It's a graft, not a parallel idea file. If you haven't read the base, read it first.
+It's a graft, not a parallel idea file. If you haven't read the core idea file, read it first.
+
+**Status: optional, and genuinely optional.** The "common" shared-rules layer described here (bridge protocol, cross-agent schema) exists *because of* this feature — it's not part of the core setup. A single-agent system needs none of it.
 
 ---
 
@@ -76,7 +78,7 @@ Don't conflate the three. The mistake people make on day one is putting cross-ag
 
 Three shapes show up in practice. Pick based on how many agents you have and how the content actually overlaps:
 
-**Hub-and-spoke.** One central agent (typically the personal-life or general-thinking-partner) plus specialist agents (thesis coach, training coach, work agent). The hub talks to each specialist; specialists generally don't talk to each other. Bridges run hub ↔ spoke. Shared surfaces, if any, are hub ⊕ spoke. This is the right shape for most non-trivial setups — it scales linearly in pairs as you add specialists, and it matches how humans actually delegate (you're the hub; the specialists report to you).
+**Hub-and-spoke.** One central agent (typically the personal-life or general-thinking-partner) plus specialist agents (thesis coach, training coach, work agent). The hub talks to each specialist; specialists generally don't talk to each other. Bridges run hub ↔ spoke. Shared surfaces, if any, are hub ⊕ spoke (shorthand for "a surface the hub and that spoke jointly reach"). This is the right shape for most non-trivial setups — it scales linearly in pairs as you add specialists, and it matches how humans actually delegate (you're the hub; the specialists report to you).
 
 **Full mesh.** Every pair has a bridge. Possible shared surfaces between any subset. Becomes unwieldy past ~4 agents — n agents means n(n-1) directional bridges, which is more discipline than most humans want to maintain. Use only when peers really do need to coordinate directly.
 
