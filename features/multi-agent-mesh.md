@@ -1,8 +1,10 @@
-# Multi-Agent Supplement
+# Feature: Multi-Agent Mesh
 
-A supplement to [`idea-file_arcee.md`](./idea-file_arcee.md) — or to any compatible single-agent personal-LLM coaching idea file. This document describes what changes when you grow a single-agent system into a mesh of n agents at different organizational scopes, exchanging context safely.
+A supplement to [`idea-file_arcee.md`](../idea-file_arcee.md) — or to any compatible single-agent personal-LLM idea file. This document describes what changes when you grow a single-agent system into a mesh of n agents at different organizational scopes, exchanging context safely.
 
-It's a graft, not a parallel idea file. If you haven't read the base, read it first.
+It's a graft, not a parallel idea file. If you haven't read the core idea file, read it first.
+
+**Status: optional, and genuinely optional.** The "common" shared-rules layer described here (bridge protocol, cross-agent schema) exists *because of* this feature — it's not part of the core setup. A single-agent system needs none of it.
 
 ---
 
