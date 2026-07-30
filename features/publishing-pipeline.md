@@ -13,7 +13,7 @@ At some point a system like this accumulates working knowledge worth sharing —
 The pipeline:
 
 1. **Draft**, written directly by the main agent from what's actually true today — no bug-history narrative, no internal jargon, objective register.
-2. **Readability QA**, run twice in parallel by two independently-trained models (a frontier model and a different-lineage open-weight model), scoped narrowly to clarity, grammar, and whether any build instructions are actually unambiguous — explicitly *not* a redesign pass.
+2. **Readability QA**, run twice in parallel by two models independent of whichever model drafted the content — in practice, this means routing the same review prompt to two different model IDs (via whatever API access you have to each) and capturing both results before looking at either — scoped narrowly to clarity, grammar, and whether any build instructions are actually unambiguous — explicitly *not* a redesign pass.
 3. **Adjudicate**, cross-checking where the two reviewers agree against the actual draft, applying the high-value fixes, skipping low-value nitpicks.
 4. **Information-leak QA**, the same two-reviewer structure, different rubric: scan for real IPs, domains, names, hostnames, internal paths — anything that fingerprints the specific deployment or its owner.
 5. **Human review and go/no-go** — the adjudicated findings presented plainly, letting the human decide final scope (e.g., docs-only vs. docs-plus-code) and where it gets published.
@@ -22,6 +22,8 @@ The pipeline:
 ## Why Two Independent Models, Twice
 
 The core design choice: run each QA pass with two models from genuinely different training lineages, not two calls to the same model or family. When two independently-trained models converge on the same finding without seeing each other's output, that convergence is itself strong evidence the finding is real — it's much less likely to be a shared training artifact than a single model's guess would be. When they disagree, that's the signal to go verify against the actual source rather than trust either one blindly.
+
+**Independence is measured against the drafting model, not against each other.** It's not enough that the two reviewers differ from *each other* — a fresh context window running the same model that drafted the content is not a different training lineage, even if the prompt asks it to be skeptical of its own prior work. Name the model that drafted the content before picking reviewers, and pick both reviewers from outside that lineage. This is an easy trap to fall into precisely because a "frontier reviewer + open-weight reviewer" pairing sounds independent by construction — it isn't, if the frontier reviewer happens to share a lineage with the draft's author.
 
 Two other things worth keeping if you adopt this: state an explicit "80/20, not perfection" bar to every reviewer and to yourself during adjudication, and require every reviewer to state explicitly whether a "stop-publishing" flag is present or absent — never leave "nothing came back" ambiguous between "everything's fine" and "the reviewer just didn't flag anything."
 
