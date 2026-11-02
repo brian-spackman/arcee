@@ -29,3 +29,7 @@ More are added as they prove durable in real use — this is a starting catalog,
 ## License
 
 [CC-BY 4.0](LICENSE). Adapt, fork, rewrite, rename — just credit the original. No warranty, no liability.
+
+## Provenance
+
+See the bottom of [`idea-file_arcee.md`](idea-file_arcee.md#provenance) for which models drafted and reviewed this content.

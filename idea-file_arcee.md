@@ -95,3 +95,9 @@ This document describes Arcee's core idea, not a template to copy verbatim. Your
 The system is supposed to emerge from your actual life, not from a template. The first month will be sparse if you're starting from nothing — that's normal. Sparse is honest.
 
 Hand this file to your AI of choice. Tell it what you want the system to do for you. Let it run the bootstrap.
+
+---
+
+## Provenance
+
+This file and the `features/` catalog were drafted by Claude Opus, and reviewed for readability and information leaks by GLM-5.2 and DeepSeek V4 Pro (both independent of the drafting model), 2026-07-30.
